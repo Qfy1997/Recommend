@@ -1,0 +1,309 @@
+NGCF
+python main.py -e 10 -b 256 -dl true -k 20 -fc Beauty
+-----------train start------------
+epochs: 0  batch: 0  cost: 0.6479165
+Epoch: 0001, BPR_Loss= 0.279496461, NDCG@20:0.1801,HR@20:0.3684,Recall@20:0.3878
+Epoch: 0002, BPR_Loss= 0.201589316, NDCG@20:0.1782,HR@20:0.3774,Recall@20:0.3914
+Epoch: 0003, BPR_Loss= 0.167328626, NDCG@20:0.1711,HR@20:0.3690,Recall@20:0.3933
+Epoch: 0004, BPR_Loss= 0.131078064, NDCG@20:0.1676,HR@20:0.3740,Recall@20:0.4031
+Epoch: 0005, BPR_Loss= 0.092878483, NDCG@20:0.1644,HR@20:0.3690,Recall@20:0.4098
+Epoch: 0006, BPR_Loss= 0.058459338, NDCG@20:0.1574,HR@20:0.3595,Recall@20:0.4157
+Epoch: 0007, BPR_Loss= 0.032555729, NDCG@20:0.1557,HR@20:0.3516,Recall@20:0.4174
+Epoch: 0008, BPR_Loss= 0.016394693, NDCG@20:0.1517,HR@20:0.3488,Recall@20:0.4172
+Epoch: 0009, BPR_Loss= 0.007781089, NDCG@20:0.1497,HR@20:0.3427,Recall@20:0.4174
+Epoch: 0010, BPR_Loss= 0.003654437, NDCG@20:0.1490,HR@20:0.3382,Recall@20:0.4177
+------------train end------------
+HR@20: 0.3404255319148936 , NDCG@20: 0.14936350612078078 , Recall@20: 0.4162094064949608
+Duration: 1 day, 3:46:15.942531
+
+LightGCN:
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+------------train start------------
+Epoch: 0001, BPR_Loss= 0.602327228, NDCG@20:0.1045,HR@20:0.2604,Recall@20:0.4813
+Epoch: 0002, BPR_Loss= 0.472856343, NDCG@20:0.1106,HR@20:0.2755,Recall@20:0.5147
+Epoch: 0003, BPR_Loss= 0.397822946, NDCG@20:0.1169,HR@20:0.2906,Recall@20:0.5134
+Epoch: 0004, BPR_Loss= 0.345666230, NDCG@20:0.1212,HR@20:0.2973,Recall@20:0.5091
+Epoch: 0005, BPR_Loss= 0.302067995, NDCG@20:0.1266,HR@20:0.3108,Recall@20:0.5043
+Epoch: 0006, BPR_Loss= 0.262595177, NDCG@20:0.1284,HR@20:0.3102,Recall@20:0.4972
+Epoch: 0007, BPR_Loss= 0.225592956, NDCG@20:0.1319,HR@20:0.3158,Recall@20:0.4902
+Epoch: 0008, BPR_Loss= 0.190848723, NDCG@20:0.1344,HR@20:0.3203,Recall@20:0.4858
+Epoch: 0009, BPR_Loss= 0.159522593, NDCG@20:0.1366,HR@20:0.3236,Recall@20:0.4814
+Epoch: 0010, BPR_Loss= 0.131641835, NDCG@20:0.1389,HR@20:0.3292,Recall@20:0.4784
+
+LightGCN_BPR:
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, BPR_Loss= 0.601355672, NDCG@20:0.1005,HR@20:0.2458,Recall@20:0.4863
+Epoch: 0002, BPR_Loss= 0.468912899, NDCG@20:0.1065,HR@20:0.2660,Recall@20:0.5121
+Epoch: 0003, BPR_Loss= 0.394119412, NDCG@20:0.1111,HR@20:0.2744,Recall@20:0.5097
+Epoch: 0004, BPR_Loss= 0.343214810, NDCG@20:0.1152,HR@20:0.2816,Recall@20:0.5049
+Epoch: 0005, BPR_Loss= 0.299933493, NDCG@20:0.1213,HR@20:0.2956,Recall@20:0.5003
+Epoch: 0006, BPR_Loss= 0.260329098, NDCG@20:0.1250,HR@20:0.3024,Recall@20:0.4957
+Epoch: 0007, BPR_Loss= 0.222831726, NDCG@20:0.1285,HR@20:0.3080,Recall@20:0.4905
+Epoch: 0008, BPR_Loss= 0.188583940, NDCG@20:0.1311,HR@20:0.3108,Recall@20:0.4867
+Epoch: 0009, BPR_Loss= 0.157548159, NDCG@20:0.1346,HR@20:0.3130,Recall@20:0.4824
+Epoch: 0010, BPR_Loss= 0.130073503, NDCG@20:0.1368,HR@20:0.3163,Recall@20:0.4782
+Epoch: 0011, BPR_Loss= 0.106059343, NDCG@20:0.1389,HR@20:0.3191,Recall@20:0.4751
+Epoch: 0012, BPR_Loss= 0.085916042, NDCG@20:0.1423,HR@20:0.3253,Recall@20:0.4718
+Epoch: 0013, BPR_Loss= 0.069029830, NDCG@20:0.1434,HR@20:0.3242,Recall@20:0.4689
+Epoch: 0014, BPR_Loss= 0.055380285, NDCG@20:0.1458,HR@20:0.3326,Recall@20:0.4660
+Epoch: 0015, BPR_Loss= 0.044207573, NDCG@20:0.1484,HR@20:0.3365,Recall@20:0.4638
+Epoch: 0016, BPR_Loss= 0.035203658, NDCG@20:0.1495,HR@20:0.3371,Recall@20:0.4614
+Epoch: 0017, BPR_Loss= 0.027972791, NDCG@20:0.1509,HR@20:0.3382,Recall@20:0.4605
+Epoch: 0018, BPR_Loss= 0.022260416, NDCG@20:0.1535,HR@20:0.3410,Recall@20:0.4588
+Epoch: 0019, BPR_Loss= 0.017516324, NDCG@20:0.1526,HR@20:0.3387,Recall@20:0.4571
+Epoch: 0020, BPR_Loss= 0.014009894, NDCG@20:0.1532,HR@20:0.3399,Recall@20:0.4563
+Epoch: 0021, BPR_Loss= 0.011132405, NDCG@20:0.1550,HR@20:0.3438,Recall@20:0.4551
+Epoch: 0022, BPR_Loss= 0.008899344, NDCG@20:0.1556,HR@20:0.3449,Recall@20:0.4538
+Epoch: 0023, BPR_Loss= 0.007090381, NDCG@20:0.1559,HR@20:0.3443,Recall@20:0.4526
+Epoch: 0024, BPR_Loss= 0.005701048, NDCG@20:0.1573,HR@20:0.3449,Recall@20:0.4516
+Epoch: 0025, BPR_Loss= 0.004617547, NDCG@20:0.1579,HR@20:0.3460,Recall@20:0.4509
+Epoch: 0026, BPR_Loss= 0.003778047, NDCG@20:0.1584,HR@20:0.3471,Recall@20:0.4498
+Epoch: 0027, BPR_Loss= 0.003083084, NDCG@20:0.1587,HR@20:0.3466,Recall@20:0.4499
+Epoch: 0028, BPR_Loss= 0.002577699, NDCG@20:0.1599,HR@20:0.3494,Recall@20:0.4495
+Epoch: 0029, BPR_Loss= 0.002188787, NDCG@20:0.1591,HR@20:0.3483,Recall@20:0.4489
+Epoch: 0030, BPR_Loss= 0.001886318, NDCG@20:0.1596,HR@20:0.3455,Recall@20:0.4480
+------------train end------------
+HR@20: 0.34546472564389696 , NDCG@20: 0.15962157457647344 , Recall@20: 0.44801231802911534
+
+
+BPR+align+uniform:
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, BPR_ua_Loss= 0.644490480, NDCG@20:0.1124,HR@20:0.2850,Recall@20:0.4004
+Epoch: 0002, BPR_ua_Loss= 0.488088697, NDCG@20:0.1236,HR@20:0.3046,Recall@20:0.4324
+Epoch: 0003, BPR_ua_Loss= 0.375991255, NDCG@20:0.1308,HR@20:0.3130,Recall@20:0.4499
+Epoch: 0004, BPR_ua_Loss= 0.296241879, NDCG@20:0.1375,HR@20:0.3141,Recall@20:0.4566
+Epoch: 0005, BPR_ua_Loss= 0.234051019, NDCG@20:0.1410,HR@20:0.3163,Recall@20:0.4573
+Epoch: 0006, BPR_ua_Loss= 0.183524132, NDCG@20:0.1460,HR@20:0.3275,Recall@20:0.4562
+Epoch: 0007, BPR_ua_Loss= 0.142098382, NDCG@20:0.1477,HR@20:0.3348,Recall@20:0.4524
+Epoch: 0008, BPR_ua_Loss= 0.108816035, NDCG@20:0.1499,HR@20:0.3359,Recall@20:0.4490
+Epoch: 0009, BPR_ua_Loss= 0.082687132, NDCG@20:0.1516,HR@20:0.3399,Recall@20:0.4462
+Epoch: 0010, BPR_ua_Loss= 0.062380675, NDCG@20:0.1544,HR@20:0.3427,Recall@20:0.4438
+Epoch: 0011, BPR_ua_Loss= 0.046662364, NDCG@20:0.1558,HR@20:0.3455,Recall@20:0.4421
+Epoch: 0012, BPR_ua_Loss= 0.034720056, NDCG@20:0.1584,HR@20:0.3511,Recall@20:0.4413
+Epoch: 0013, BPR_ua_Loss= 0.025664192, NDCG@20:0.1600,HR@20:0.3533,Recall@20:0.4393
+Epoch: 0014, BPR_ua_Loss= 0.018822372, NDCG@20:0.1608,HR@20:0.3539,Recall@20:0.4366
+Epoch: 0015, BPR_ua_Loss= 0.013660782, NDCG@20:0.1611,HR@20:0.3567,Recall@20:0.4344
+Epoch: 0016, BPR_ua_Loss= 0.009715284, NDCG@20:0.1617,HR@20:0.3550,Recall@20:0.4332
+Epoch: 0017, BPR_ua_Loss= 0.006742948, NDCG@20:0.1635,HR@20:0.3611,Recall@20:0.4315
+Epoch: 0018, BPR_ua_Loss= 0.004543674, NDCG@20:0.1642,HR@20:0.3606,Recall@20:0.4301
+Epoch: 0019, BPR_ua_Loss= 0.002908882, NDCG@20:0.1656,HR@20:0.3645,Recall@20:0.4291
+Epoch: 0020, BPR_ua_Loss= 0.001639381, NDCG@20:0.1647,HR@20:0.3611,Recall@20:0.4275
+Epoch: 0021, BPR_ua_Loss= 0.000695131, NDCG@20:0.1651,HR@20:0.3617,Recall@20:0.4253
+Epoch: 0022, BPR_ua_Loss= -0.000020413, NDCG@20:0.1663,HR@20:0.3617,Recall@20:0.4233
+Epoch: 0023, BPR_ua_Loss= -0.000537429, NDCG@20:0.1678,HR@20:0.3662,Recall@20:0.4213
+Epoch: 0024, BPR_ua_Loss= -0.000956571, NDCG@20:0.1672,HR@20:0.3623,Recall@20:0.4191
+Epoch: 0025, BPR_ua_Loss= -0.001239384, NDCG@20:0.1680,HR@20:0.3645,Recall@20:0.4162
+Epoch: 0026, BPR_ua_Loss= -0.001492201, NDCG@20:0.1676,HR@20:0.3628,Recall@20:0.4143
+Epoch: 0027, BPR_ua_Loss= -0.001675173, NDCG@20:0.1689,HR@20:0.3662,Recall@20:0.4116
+Epoch: 0028, BPR_ua_Loss= -0.001829021, NDCG@20:0.1704,HR@20:0.3679,Recall@20:0.4083
+Epoch: 0029, BPR_ua_Loss= -0.001939698, NDCG@20:0.1710,HR@20:0.3667,Recall@20:0.4050
+Epoch: 0030, BPR_ua_Loss= -0.002036818, NDCG@20:0.1712,HR@20:0.3673,Recall@20:0.4023
+------------train end------------
+HR@20: 0.3673012318029115 , NDCG@20: 0.171173276459916 , Recall@20: 0.40232362821948486
+Duration: 22:51:21.219257
+
+align+uniform_embed_size_64:
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, align_uniform_Loss= -0.002525183, NDCG@20:0.1485,HR@20:0.3315,Recall@20:0.3383
+Epoch: 0002, align_uniform_Loss= -0.003288547, NDCG@20:0.1421,HR@20:0.3259,Recall@20:0.3376
+Epoch: 0003, align_uniform_Loss= -0.003417866, NDCG@20:0.1420,HR@20:0.3242,Recall@20:0.3385
+Epoch: 0004, align_uniform_Loss= -0.003487297, NDCG@20:0.1382,HR@20:0.3242,Recall@20:0.3389
+Epoch: 0005, align_uniform_Loss= -0.003534218, NDCG@20:0.1395,HR@20:0.3236,Recall@20:0.3378
+Epoch: 0006, align_uniform_Loss= -0.003569879, NDCG@20:0.1403,HR@20:0.3309,Recall@20:0.3385
+Epoch: 0008, align_uniform_Loss= -0.003617913, NDCG@20:0.1388,HR@20:0.3236,Recall@20:0.3391
+Epoch: 0009, align_uniform_Loss= -0.003635200, NDCG@20:0.1403,HR@20:0.3264,Recall@20:0.3413
+Epoch: 0010, align_uniform_Loss= -0.003649283, NDCG@20:0.1407,HR@20:0.3275,Recall@20:0.3398
+Epoch: 0011, align_uniform_Loss= -0.003661006, NDCG@20:0.1411,HR@20:0.3275,Recall@20:0.3411
+Epoch: 0012, align_uniform_Loss= -0.003671943, NDCG@20:0.1398,HR@20:0.3191,Recall@20:0.3399
+Epoch: 0013, align_uniform_Loss= -0.003681267, NDCG@20:0.1409,HR@20:0.3236,Recall@20:0.3394
+Epoch: 0014, align_uniform_Loss= -0.003689297, NDCG@20:0.1408,HR@20:0.3247,Recall@20:0.3402
+Epoch: 0015, align_uniform_Loss= -0.003696920, NDCG@20:0.1404,HR@20:0.3203,Recall@20:0.3391
+Epoch: 0016, align_uniform_Loss= -0.003702864, NDCG@20:0.1394,HR@20:0.3208,Recall@20:0.3391
+Epoch: 0017, align_uniform_Loss= -0.003709646, NDCG@20:0.1387,HR@20:0.3191,Recall@20:0.3392
+Epoch: 0018, align_uniform_Loss= -0.003714611, NDCG@20:0.1396,HR@20:0.3236,Recall@20:0.3383
+Epoch: 0019, align_uniform_Loss= -0.003719768, NDCG@20:0.1400,HR@20:0.3214,Recall@20:0.3393
+Epoch: 0020, align_uniform_Loss= -0.003724668, NDCG@20:0.1399,HR@20:0.3219,Recall@20:0.3397
+Epoch: 0021, align_uniform_Loss= -0.003728207, NDCG@20:0.1402,HR@20:0.3214,Recall@20:0.3394
+Epoch: 0022, align_uniform_Loss= -0.003732627, NDCG@20:0.1394,HR@20:0.3191,Recall@20:0.3389
+Epoch: 0023, align_uniform_Loss= -0.003736201, NDCG@20:0.1389,HR@20:0.3191,Recall@20:0.3387
+Epoch: 0024, align_uniform_Loss= -0.003739549, NDCG@20:0.1394,HR@20:0.3208,Recall@20:0.3387
+Epoch: 0025, align_uniform_Loss= -0.003743493, NDCG@20:0.1403,HR@20:0.3197,Recall@20:0.3379
+Epoch: 0026, align_uniform_Loss= -0.003747076, NDCG@20:0.1394,HR@20:0.3175,Recall@20:0.3398
+Epoch: 0027, align_uniform_Loss= -0.003748828, NDCG@20:0.1382,HR@20:0.3163,Recall@20:0.3386
+Epoch: 0028, align_uniform_Loss= -0.003751481, NDCG@20:0.1393,HR@20:0.3158,Recall@20:0.3380
+Epoch: 0029, align_uniform_Loss= -0.003754215, NDCG@20:0.1401,HR@20:0.3203,Recall@20:0.3381
+Epoch: 0030, align_uniform_Loss= -0.003756679, NDCG@20:0.1390,HR@20:0.3158,Recall@20:0.3384
+------------train end------------
+HR@20: 0.3157894736842105 , NDCG@20: 0.13900291975670054 , Recall@20: 0.33838185890257555
+Duration: 1 day, 0:58:26.667986
+
+
+RecDCL_embed_size_64:
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, RecDCL_loss= 3.661050081, NDCG@20:0.0703,HR@20:0.1976,Recall@20:0.3564
+Epoch: 0002, RecDCL_loss= 2.071185827, NDCG@20:0.0697,HR@20:0.1954,Recall@20:0.3640
+Epoch: 0003, RecDCL_loss= 1.180548906, NDCG@20:0.0694,HR@20:0.1937,Recall@20:0.3620
+Epoch: 0004, RecDCL_loss= 0.608070612, NDCG@20:0.0697,HR@20:0.1937,Recall@20:0.3583
+Epoch: 0005, RecDCL_loss= 0.218666404, NDCG@20:0.0701,HR@20:0.1948,Recall@20:0.3547
+Epoch: 0006, RecDCL_loss= -0.048271034, NDCG@20:0.0697,HR@20:0.1932,Recall@20:0.3534
+Epoch: 0007, RecDCL_loss= -0.230187997, NDCG@20:0.0700,HR@20:0.1943,Recall@20:0.3531
+Epoch: 0008, RecDCL_loss= -0.362084091, NDCG@20:0.0696,HR@20:0.1926,Recall@20:0.3532
+Epoch: 0009, RecDCL_loss= -0.461962044, NDCG@20:0.0690,HR@20:0.1904,Recall@20:0.3535
+Epoch: 0010, RecDCL_loss= -0.541275620, NDCG@20:0.0694,HR@20:0.1904,Recall@20:0.3535
+Epoch: 0011, RecDCL_loss= -0.606743932, NDCG@20:0.0692,HR@20:0.1898,Recall@20:0.3545
+Epoch: 0012, RecDCL_loss= -0.662793517, NDCG@20:0.0692,HR@20:0.1898,Recall@20:0.3548
+Epoch: 0013, RecDCL_loss= -0.710548580, NDCG@20:0.0690,HR@20:0.1887,Recall@20:0.3544
+Epoch: 0014, RecDCL_loss= -0.753058672, NDCG@20:0.0687,HR@20:0.1881,Recall@20:0.3544
+Epoch: 0015, RecDCL_loss= -0.789985299, NDCG@20:0.0692,HR@20:0.1904,Recall@20:0.3541
+Epoch: 0016, RecDCL_loss= -0.823434770, NDCG@20:0.0695,HR@20:0.1915,Recall@20:0.3538
+Epoch: 0017, RecDCL_loss= -0.852094650, NDCG@20:0.0693,HR@20:0.1909,Recall@20:0.3541
+Epoch: 0018, RecDCL_loss= -0.877983332, NDCG@20:0.0693,HR@20:0.1909,Recall@20:0.3542
+Epoch: 0019, RecDCL_loss= -0.900213480, NDCG@20:0.0694,HR@20:0.1909,Recall@20:0.3542
+Epoch: 0020, RecDCL_loss= -0.919863820, NDCG@20:0.0694,HR@20:0.1909,Recall@20:0.3539
+Epoch: 0021, RecDCL_loss= -0.937060475, NDCG@20:0.0696,HR@20:0.1915,Recall@20:0.3537
+Epoch: 0022, RecDCL_loss= -0.953128457, NDCG@20:0.0694,HR@20:0.1909,Recall@20:0.3536
+Epoch: 0023, RecDCL_loss= -0.966376364, NDCG@20:0.0696,HR@20:0.1915,Recall@20:0.3536
+Epoch: 0024, RecDCL_loss= -0.978435278, NDCG@20:0.0698,HR@20:0.1926,Recall@20:0.3532
+Epoch: 0025, RecDCL_loss= -0.988910913, NDCG@20:0.0698,HR@20:0.1926,Recall@20:0.3533
+Epoch: 0026, RecDCL_loss= -0.998117566, NDCG@20:0.0699,HR@20:0.1926,Recall@20:0.3530
+Epoch: 0027, RecDCL_loss= -1.006835699, NDCG@20:0.0695,HR@20:0.1909,Recall@20:0.3530
+Epoch: 0028, RecDCL_loss= -1.014385462, NDCG@20:0.0697,HR@20:0.1920,Recall@20:0.3529
+Epoch: 0029, RecDCL_loss= -1.020814776, NDCG@20:0.0695,HR@20:0.1909,Recall@20:0.3527
+Epoch: 0030, RecDCL_loss= -1.027178526, NDCG@20:0.0695,HR@20:0.1909,Recall@20:0.3523
+------------train end------------
+HR@20: 0.19092945128779396 , NDCG@20: 0.06946307301145198 , Recall@20: 0.3523236282194849
+Duration: 1 day, 2:13:10.707216
+
+
+RecDCL_embed_size_2048
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, RecDCL_BPR_loss= 2.212519407, NDCG@20:0.0713,HR@20:0.2027,Recall@20:0.4606
+Epoch: 0002, RecDCL_BPR_loss= 1.382830620, NDCG@20:0.0721,HR@20:0.2004,Recall@20:0.4882
+Epoch: 0003, RecDCL_BPR_loss= 1.476354241, NDCG@20:0.0744,HR@20:0.2044,Recall@20:0.4715
+Epoch: 0004, RecDCL_BPR_loss= 1.501699209, NDCG@20:0.0737,HR@20:0.1976,Recall@20:0.4580
+Epoch: 0005, RecDCL_BPR_loss= 1.510530949, NDCG@20:0.0753,HR@20:0.2038,Recall@20:0.4487
+Epoch: 0006, RecDCL_BPR_loss= 1.528574467, NDCG@20:0.0762,HR@20:0.2083,Recall@20:0.4444
+Epoch: 0007, RecDCL_BPR_loss= 1.528810024, NDCG@20:0.0769,HR@20:0.2122,Recall@20:0.4428
+Epoch: 0008, RecDCL_BPR_loss= 1.514654279, NDCG@20:0.0783,HR@20:0.2156,Recall@20:0.4449
+Epoch: 0009, RecDCL_BPR_loss= 1.494760275, NDCG@20:0.0782,HR@20:0.2139,Recall@20:0.4471
+Epoch: 0010, RecDCL_BPR_loss= 1.464953542, NDCG@20:0.0800,HR@20:0.2195,Recall@20:0.4498
+Epoch: 0011, RecDCL_BPR_loss= 1.428301692, NDCG@20:0.0817,HR@20:0.2268,Recall@20:0.4513
+Epoch: 0012, RecDCL_BPR_loss= 1.396659732, NDCG@20:0.0831,HR@20:0.2268,Recall@20:0.4543
+Epoch: 0013, RecDCL_BPR_loss= 1.367585301, NDCG@20:0.0848,HR@20:0.2312,Recall@20:0.4553
+Epoch: 0014, RecDCL_BPR_loss= 1.345315814, NDCG@20:0.0865,HR@20:0.2352,Recall@20:0.4590
+Epoch: 0015, RecDCL_BPR_loss= 1.329462647, NDCG@20:0.0866,HR@20:0.2329,Recall@20:0.4616
+Epoch: 0016, RecDCL_BPR_loss= 1.317099214, NDCG@20:0.0882,HR@20:0.2368,Recall@20:0.4644
+Epoch: 0017, RecDCL_BPR_loss= 1.310734153, NDCG@20:0.0890,HR@20:0.2363,Recall@20:0.4691
+Epoch: 0018, RecDCL_BPR_loss= 1.304516912, NDCG@20:0.0902,HR@20:0.2413,Recall@20:0.4707
+Epoch: 0019, RecDCL_BPR_loss= 1.294715762, NDCG@20:0.0913,HR@20:0.2408,Recall@20:0.4748
+Epoch: 0020, RecDCL_BPR_loss= 1.283495545, NDCG@20:0.0942,HR@20:0.2508,Recall@20:0.4799
+Epoch: 0021, RecDCL_BPR_loss= 1.267937422, NDCG@20:0.0939,HR@20:0.2452,Recall@20:0.4839
+Epoch: 0022, RecDCL_BPR_loss= 1.251710296, NDCG@20:0.0974,HR@20:0.2553,Recall@20:0.4872
+Epoch: 0023, RecDCL_BPR_loss= 1.231768131, NDCG@20:0.0979,HR@20:0.2525,Recall@20:0.4927
+Epoch: 0024, RecDCL_BPR_loss= 1.209927678, NDCG@20:0.0997,HR@20:0.2592,Recall@20:0.4955
+Epoch: 0025, RecDCL_BPR_loss= 1.190273166, NDCG@20:0.0999,HR@20:0.2581,Recall@20:0.4989
+Epoch: 0026, RecDCL_BPR_loss= 1.170295596, NDCG@20:0.1001,HR@20:0.2576,Recall@20:0.5020
+Epoch: 0027, RecDCL_BPR_loss= 1.153499126, NDCG@20:0.1025,HR@20:0.2615,Recall@20:0.5053
+Epoch: 0028, RecDCL_BPR_loss= 1.137996435, NDCG@20:0.1052,HR@20:0.2643,Recall@20:0.5094
+Epoch: 0029, RecDCL_BPR_loss= 1.122409463, NDCG@20:0.1048,HR@20:0.2654,Recall@20:0.5124
+Epoch: 0030, RecDCL_BPR_loss= 1.107428432, NDCG@20:0.1062,HR@20:0.2654,Recall@20:0.5153
+------------train end------------
+HR@20: 0.26539753639417696 , NDCG@20: 0.10619713934883838 , Recall@20: 0.5152855543113102
+Duration: 6 days, 14:01:47.668509
+
+python main.py -e 30 -b 256 -dl true -k 20 -fc Beauty
+device: cpu
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+len users:torch.Size([555804])
+len items:torch.Size([555804, 2])
+len users:torch.Size([178653])
+len items:torch.Size([178653])
+create interaction matrix...
+------------train start------------
+Epoch: 0001, RecDCL_loss= 0.883933425, NDCG@20:0.0671,HR@20:0.1876,Recall@20:0.3854
+Epoch: 0002, RecDCL_loss= -0.645436645, NDCG@20:0.0683,HR@20:0.1909,Recall@20:0.3804
+Epoch: 0003, RecDCL_loss= -0.953239083, NDCG@20:0.0677,HR@20:0.1865,Recall@20:0.3757
+Epoch: 0004, RecDCL_loss= -1.083209634, NDCG@20:0.0679,HR@20:0.1881,Recall@20:0.3720
+Epoch: 0005, RecDCL_loss= -1.151048422, NDCG@20:0.0679,HR@20:0.1876,Recall@20:0.3684
+Epoch: 0006, RecDCL_loss= -1.194144607, NDCG@20:0.0679,HR@20:0.1881,Recall@20:0.3658
+Epoch: 0007, RecDCL_loss= -1.226908088, NDCG@20:0.0677,HR@20:0.1881,Recall@20:0.3645
+Epoch: 0008, RecDCL_loss= -1.254527569, NDCG@20:0.0677,HR@20:0.1887,Recall@20:0.3629
+Epoch: 0009, RecDCL_loss= -1.278475165, NDCG@20:0.0676,HR@20:0.1887,Recall@20:0.3609
+Epoch: 0010, RecDCL_loss= -1.299131393, NDCG@20:0.0674,HR@20:0.1876,Recall@20:0.3594
+Epoch: 0011, RecDCL_loss= -1.317067623, NDCG@20:0.0675,HR@20:0.1876,Recall@20:0.3585
+Epoch: 0012, RecDCL_loss= -1.333021998, NDCG@20:0.0675,HR@20:0.1876,Recall@20:0.3566
+Epoch: 0013, RecDCL_loss= -1.347129464, NDCG@20:0.0673,HR@20:0.1859,Recall@20:0.3549
+Epoch: 0014, RecDCL_loss= -1.359760761, NDCG@20:0.0671,HR@20:0.1853,Recall@20:0.3540
+Epoch: 0015, RecDCL_loss= -1.371529341, NDCG@20:0.0668,HR@20:0.1837,Recall@20:0.3530
+Epoch: 0016, RecDCL_loss= -1.381662846, NDCG@20:0.0672,HR@20:0.1842,Recall@20:0.3521
+Epoch: 0017, RecDCL_loss= -1.391238332, NDCG@20:0.0673,HR@20:0.1848,Recall@20:0.3506
+Epoch: 0018, RecDCL_loss= -1.399463654, NDCG@20:0.0675,HR@20:0.1853,Recall@20:0.3495
+Epoch: 0019, RecDCL_loss= -1.407298207, NDCG@20:0.0677,HR@20:0.1865,Recall@20:0.3483
+Epoch: 0020, RecDCL_loss= -1.414684415, NDCG@20:0.0682,HR@20:0.1887,Recall@20:0.3475
+Epoch: 0021, RecDCL_loss= -1.421233892, NDCG@20:0.0682,HR@20:0.1887,Recall@20:0.3464
+Epoch: 0022, RecDCL_loss= -1.427361012, NDCG@20:0.0681,HR@20:0.1881,Recall@20:0.3455
+Epoch: 0023, RecDCL_loss= -1.432737231, NDCG@20:0.0681,HR@20:0.1881,Recall@20:0.3448
+Epoch: 0024, RecDCL_loss= -1.437912941, NDCG@20:0.0681,HR@20:0.1881,Recall@20:0.3442
+Epoch: 0025, RecDCL_loss= -1.442646146, NDCG@20:0.0681,HR@20:0.1881,Recall@20:0.3435
+Epoch: 0026, RecDCL_loss= -1.446899772, NDCG@20:0.0680,HR@20:0.1881,Recall@20:0.3429
+Epoch: 0027, RecDCL_loss= -1.450903773, NDCG@20:0.0681,HR@20:0.1887,Recall@20:0.3422
+Epoch: 0028, RecDCL_loss= -1.454689145, NDCG@20:0.0682,HR@20:0.1887,Recall@20:0.3421
+Epoch: 0029, RecDCL_loss= -1.458225369, NDCG@20:0.0683,HR@20:0.1892,Recall@20:0.3414
+Epoch: 0030, RecDCL_loss= -1.461537719, NDCG@20:0.0681,HR@20:0.1887,Recall@20:0.3406
+------------train end------------
+HR@20: 0.18868980963045912 , NDCG@20: 0.06814016872945713 , Recall@20: 0.340565509518477
+Duration: 6 days, 11:07:20.143053
+
+
