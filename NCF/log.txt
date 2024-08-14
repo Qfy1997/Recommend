@@ -1,0 +1,181 @@
+Beauty数据集的MLP模型:
+python main.py --epoch 30 --batch 256 --factor 8 --model MLP --topk 20 --file_category Beauty  --save True
+device: cpu
+model name: MLP
+file category:Beauty
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+negative sampled data: 694755
+negative sampled data: 178653
+epoch: 0 , batch  0  cost: 0.63060725
+...
+epoch: 29 , batch  2713  cost: 0.0058453353
+Epoch: 29 :
+HR@20: 0.099	NDCG@20: 0.072	Recall@20:0.711
+Learning finished
+training time:4049.25128s (1.12h)
+HR@20: 0.194	NDCG@20: 0.096	Recall@20:0.632
+
+
+movielens数据集的MLP模型:
+python main.py --epoch 30 --batch 256 --factor 8 --model MLP --topk 20 --file_category 1m  --save True
+device: cpu
+model name: MLP
+file size:1m
+Reading file
+Reading Complete!
+len(total): 1000209, len(train): 700146, len(test): 300063
+negative sampled data: 3500730
+negative sampled data: 900189
+data loaded!
+epoch: 0 , batch  0  cost: 0.73562026
+...
+epoch: 29 , batch  13674  cost: 0.26258662
+Epoch: 29 :
+HR@20: 0.102	NDCG@20: 0.047	Recall@20:0.825
+Learning finished
+training time:20980.76379
+HR@20: 0.204	NDCG@20: 0.073	Recall@20:0.532
+
+yelp数据集的MLP模型:
+python main.py --epoch 30 --batch 256 --factor 8 --model MLP --topk 20 --file_category yelp  --save True
+device: cpu
+model name: MLP
+file category:yelp
+Reading file
+Reading Complete!
+len(total): 1561406, len(train): 1092984, len(test): 468422
+negative sampled data: 5464920
+negative sampled data: 1405266
+data loaded!
+epoch: 0 , batch  0  cost: 0.80996317
+...
+epoch: 29 , batch  21347  cost: 0.06816736
+Epoch: 29 :
+HR@20: 0.098	NDCG@20: 0.045	Recall@20:0.915
+Learning finished
+training time:51744.35600
+HR@20: 0.197	NDCG@20: 0.070	Recall@20:0.785
+
+Beauty数据集的GMF模型
+python main.py --epoch 30 --batch 256 --factor 8 --model GMF --topk 20 --file_category Beauty --layer 64 32 16 --save True
+device: cpu
+model name: GMF
+file category:Beauty
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+negative sampled data: 694755
+negative sampled data: 178653
+data loaded!
+epoch: 0 , batch  0  cost: 0.7804343
+...
+epoch: 29 , batch  2713  cost: 0.08580096
+Epoch: 29 :
+HR: 0.101	NDCG: 0.056	Recall:0.606
+Learning finished
+training time:110244.39524(30.2h)
+HR: 0.193	NDCG: 0.079	Recall:0.572
+
+movielens数据集的GMF模型:
+python main.py --epoch 30 --batch 256 --factor 8 --model GMF --topk 20 --file_category 1m --layer 64 32 16 --save True
+device: cpu
+model name: GMF
+file category:1m
+Reading file
+Reading Complete!
+len(total): 1000209, len(train): 700146, len(test): 300063
+negative sampled data: 3500730
+negative sampled data: 900189
+data loaded!
+epoch: 0 , batch  0  cost: 0.7671744
+...
+epoch: 29 , batch  13674  cost: 0.22555275
+Epoch: 29 :
+HR@20: 0.103	NDCG@20: 0.048	Recall@20:0.533
+Learning finished
+training time:131670.39549
+HR@20: 0.199	NDCG@20: 0.072	Recall@20:0.358
+
+Beauty数据集的NeuMF模型,use_pretrain:
+python main.py --epoch 30 --batch 256 --factor 8 --model NeuMF --topk 20 --file_category Beauty  --save True --use_pretrain True
+device: cpu
+model name: NeuMF
+file category:Beauty
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+negative sampled data: 694755
+negative sampled data: 178653
+data loaded!
+epoch: 0 , batch  0  cost: 1.5280608
+...
+epoch: 29 , batch  2713  cost: 0.1039201
+Epoch: 29 :
+HR@20: 0.101	NDCG@20: 0.045	Recall@20:0.681
+Learning finished
+training time:22015.17059
+HR@20: 0.198	NDCG@20: 0.069	Recall@20:0.557
+
+
+Beauty数据集的NeuMF模型,use_pretrain:False
+python main.py --epoch 30 --batch 256 --factor 8 --model NeuMF --topk 20 --file_category Beauty  --save True --use_pretrain False
+device: cpu
+model name: NeuMF
+file category:Beauty
+Reading file
+Reading Complete!
+len(total): 198502, len(train): 138951, len(test): 59551
+negative sampled data: 694755
+negative sampled data: 178653
+data loaded!
+epoch: 0 , batch  0  cost: 0.75270706
+...
+epoch: 29 , batch  2713  cost: 4.9059785e-05
+Epoch: 29 :
+HR: 0.108	NDCG: 0.086	Recall:0.715
+Learning finished
+training time:88947.85300
+HR: 0.205	NDCG: 0.110	Recall:0.625
+
+Movielens数据集的NeuMF模型,use_pretrain:True
+python main.py --epoch 30 --batch 256 --factor 8 --model NeuMF --topk 20 --file_category 1m  --save True --use_pretrain True
+device: cpu
+model name: NeuMF
+file category:1m
+Reading file
+Reading Complete!
+len(total): 1000209, len(train): 700146, len(test): 300063
+negative sampled data: 3500730
+negative sampled data: 900189
+data loaded!
+epoch: 0 , batch  0  cost: 0.2250151
+...
+epoch: 29 , batch  13674  cost: 0.21505696
+Epoch: 29 :
+HR: 0.100	NDCG: 0.047	Recall:0.596
+Learning finished
+training time:50889.17964
+HR: 0.202	NDCG: 0.072	Recall:0.384
+
+
+Movielens数据集的NeuMF模型,use_pretrain:False
+python main.py --epoch 30 --batch 256 --factor 8 --model NeuMF --topk 20 --file_category 1m  --save True --use_pretrain False
+device: cpu
+model name: NeuMF
+file category:1m
+Reading file
+Reading Complete!
+len(total): 1000209, len(train): 700146, len(test): 300063
+negative sampled data: 3500730
+negative sampled data: 900189
+data loaded!
+epoch: 0 , batch  0  cost: 0.64952344
+...
+epoch: 29 , batch  13674  cost: 0.17738521
+Epoch: 29 :
+HR@20: 0.104	NDCG@20: 0.047	Recall@20:0.873
+Learning finished
+training time:103417.90564
+HR@20: 0.204	NDCG@20: 0.072	Recall@20:0.578
